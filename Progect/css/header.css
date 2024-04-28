@@ -1,0 +1,160 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #F86310;
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+}
+
+.header nav img  {
+  width: 132px;
+  height: 32px;
+  margin-left: 100px;
+  margin-right: 163px;
+}
+
+.header nav a {
+  color: #333;
+  text-decoration: none;
+  margin-right: 16px;
+  font-size: 1.2rem;
+}
+
+.header .search-form {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.header .search-form input[type="search"] {
+  width: 250px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-left: 30px;
+}
+
+.header .search-form button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  transform: translateY(-50%);
+  padding: 5px;
+  border: none;
+  background: none;
+  margin-left: 125px;
+}
+
+.header .search-form button img {
+  width: 32px;
+  height: 32px;
+}
+
+.header nav button {
+  left: 0;
+  padding: 5px;
+  border: none;
+  background: none;
+  margin-left: 100px;
+  cursor: pointer;
+}
+
+.header nav button img {
+  width: 24px;
+  height: 24px;
+}
+
+
+
+@media (min-width: 480px) {
+  .header {
+    background-size: 1400px;
+    padding-bottom: 44px;
+  }
+
+  .header__container {
+    max-width: 480px;
+  }
+
+  .header__wrapper {
+    padding-bottom: 0;
+    padding-left: 180px;
+    padding-top: 27px;
+    text-align: left;
+    background-position: left;
+    background-size: contain;
+    min-height: 190px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .header {
+    background-size: 2540px;
+  }
+
+  .header__container {
+    max-width: calc(562px + var(--padding-container) * 2);
+  }
+
+  .header__wrapper {
+    padding-left: 237px;
+    min-height: 229px;
+  }
+
+  .header__title {
+    font-size: 36px;
+    margin-bottom: 26px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    background-size: 2880px;
+    padding-bottom: 63px;
+    margin-bottom: 40px;
+  }
+
+  .header__container {
+    max-width: calc(764px + var(--padding-container) * 2);
+  }
+
+  .header__wrapper {
+    padding-top: 46px;
+    padding-left: 326px;
+    min-height: 326px;
+  }
+
+  .header__title {
+    font-size: 50px;
+    margin-bottom: 52px;
+  }
+
+  .header__appeal {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: 1360px) {
+  .header__container {
+    max-width: calc(784px + var(--padding-container) * 2);
+  }
+
+  .header__wrapper {
+    padding-left: 346px;
+  }
+}
+
+
+@media (min-width: 1920px) {
+  .header {
+    background-size: 4660px;
+  }
+}

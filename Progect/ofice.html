@@ -1,0 +1,55 @@
+<html><head>
+    <title>Увійти</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      form {
+        border: 1px solid #ccc;
+        padding: 20px;
+        width: 300px;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+      input[type="text"], input[type="email"], textarea {
+        width: 100%;
+        padding: 5px;
+        margin-top: 5px;
+      }
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      h1 {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Форма зворотнього зв'язку</h2>
+    <form action="/submit_feedback" method="post">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name"><br>
+      <label for="surname">Surname:</label><br>
+      <input type="text" id="surname" name="surname"><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br>
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message"></textarea><br>
+      <input type="submit" value="Submit">
+    </form>
+  
+</body></html>

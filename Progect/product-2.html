@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gifty-Online</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preload" href="fonts/nunito-v25-latin_cyrillic-600.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/nunito-v25-latin_cyrillic-regular.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/nunito-v25-latin_cyrillic-800.woff2" as="font" crossorigin>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/container.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/catalog.css">
+  <link rel="stylesheet" href="css/order.css">
+  <link rel="stylesheet" href="css/goods.css">
+  <link rel="stylesheet" href="css/count.css">
+  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/mproduct.css">
+  <link rel="stylesheet" href="css/ingredients.css">
+  <link rel="stylesheet" href="css/mdelivery.css">
+  <link rel="stylesheet" href="css/modal-product.css">
+  <style>
+    /* Стилі для хедера */
+    .header {
+      padding: 10px 0;
+      /* Внутрішні відступи */
+      text-align: center;
+      /* Вирівнювання тексту */
+    }
+
+    /* Стилі для навігаційного меню всередині хедера */
+    .header nav {
+      margin-top: 10px;
+      /* Відступ зверху */
+    }
+
+    .header nav a {
+      color: #fff;
+      /* Колір посилань */
+      text-decoration: none;
+      /* Видаляє декорацію тексту (підкреслення) */
+      padding: 5px 15px;
+      /* Внутрішні відступи */
+      display: inline-block;
+      /* Відображення блоків в лінію */
+    }
+
+    .header nav a:hover {
+      background-color: #ddd;
+      /* Колір фону при наведенні */
+      color: #333;
+      /* Колір тексту при наведенні */
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <nav>
+      <a href="index.html">
+        <img src="../Progect/img/logo.png" alt="Логотип">
+      </a>
+      <a href="index.html">Головна</a>
+      <a href="#about">Про нас</a>
+      <a href="#services">Послуги</a>
+      <a href="#contact">Контакти</a>
+
+      <form action="#" method="get" class="search-form">
+        <input type="search" name="q" placeholder="Пошук...">
+        <button type="submit"><img src="../Progect/img/dandruff.png" alt="Лупа"></button>
+      </form>
+      <button type="submit"><img src="../Progect/img/office.png" alt="Особистий кабінет"></button>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="mproduct__container">
+      <h2 class="mproduct__title">Тримач для книг «Архітектурний»</h2>
+
+      <div class="mproduct__content">
+
+        <img src="img/product-2.png" alt="Тримач для книг «Архітектурний»" class="mproduct__image">
+
+        <div class="mproduct__ingredients ingredients">
+
+          <p class="mproduct__description">Характеристика</p>
+
+          <ul class="ingredients__list">
+            <li class="ingredients__item">Висота: 14 см</li>
+            <li class="ingredients__item">Ширина: 9,5 см</li>
+            <li class="ingredients__item">Матеріал : гіпс</li>
+            <li class="ingredients__item">Вага: 1830 г</li>
+          </ul>
+
+          <p class="ingredients__calories">Є в наявності</p>
+
+        </div>
+      </div>
+
+      <button class="product__add" type="button">Додати в кошик</button>
+
+    </div>
+
+    <div class="recommended__products__container">
+
+      <p class="mproduct__description">Рекомендовані</p>
+      <br />
+
+      <div class="recommended__products__content">
+        <div>
+            <img src="img/product-1.png" alt="Дерев'яна скарбничка" class="mproduct__image">
+            <p class="product__price">689<span class="currency">₴ </span></p>
+            <h3 class="product__title">
+                <a href="product-1.html" class="product__detail">Дерев'яна скарбничка для грошей</a>
+            </h3>
+            <a href="#" class="button">Додати</a>
+        </div>
+        <div>
+            <img src="img/product-2.png" alt="Дерев'яна скарбничка" class="mproduct__image">
+            <p class="product__price">550<span class="currency">₴ </span></p>
+            <h3 class="product__title">
+                <a href="product-2.html" class="product__detail">Тримач для книг «Архітектурний»</a>
+            </h3>
+            <a href="#" class="button">Додати</a>
+        </div>
+        <div>
+            <img src="img/product-3.png" alt="Дерев'яна скарбничка" class="mproduct__image">
+            <p class="product__price">639<span class="currency">₴</span></p>
+            <h3 class="product__title">
+                <a href="product-3.html" class="product__detail">Тримач для книг «Руки»</a>
+            </h3>
+            <a href="#" class="button">Додати</a>
+        </div>
+    </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <img class="footer__logo" src="img/logo.png" alt="Логотип gift">
+
+        <address class="footer__address">
+          <div class="footer__contact">
+            <h2 class="footer__title">Номер для замовленняа</h2>
+
+            <a class="footer__phone" href="tel:+79308333811">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.01 15.38C18.78 15.38 17.59 15.18 16.48 14.82C16.13 14.7 15.74 14.79 15.47 15.06L13.9 17.03C11.07 15.68 8.42 13.13 7.01 10.2L8.96 8.54C9.23 8.26 9.31 7.87 9.2 7.52C8.83 6.41 8.64 5.22 8.64 3.99C8.64 3.45 8.19 3 7.65 3H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21C20.72 21 21 20.37 21 19.82V16.37C21 15.83 20.55 15.38 20.01 15.38Z" />
+              </svg>
+
+              <span>+380(930)833-111-11</span>
+            </a>
+          </div>
+
+          <div class="footer__contact">
+            <h2 class="footer__title footer__title_sn">Ми в соцмережах</h2>
+
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__sn" aria-label="Instagram">
+                  <img src="../Progect/img/instagram.png" alt="Instagram">
+                </a>
+              </li>
+
+              <li class="footer__item">
+                <a href="#" class="footer__sn" aria-label="канал в telegram">
+                  <img src="../Progect/img/telegram.png" alt="telegram">
+                </a>
+              </li>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="#" class="footer__sn" aria-label="группа в вк">
+                    <img src="../Progect/img/facebook.png" alt="facebook">
+                  </a>
+                </li>
+              </ul>
+          </div>
+        </address>
+
+        <div class="footer__development">
+          <p>© gifty, 2024</p>
+          <p>Design: <a href="volodymyr.v.yaniuk@ukd.edu.ua">Yaniuk volodymyr</a></p>
+          <p>Developer: <a href="volodymyr.v.yaniuk@ukd.edu.ua">Yaniuk volodymyr</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
