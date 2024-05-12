@@ -70,6 +70,7 @@
   line-height: 130%;
 }
 
+
 .recommended__products__container {
   background-color: #fdfbfb00;
   padding: 0px;
@@ -120,6 +121,24 @@
 
 .recommended__products__content .button:hover {
   background-color: #F2F2F3;
+}
+@media screen and (max-width: 1250px) {
+  .recommended__products__content {
+    flex-direction: column;
+  }
+  .recommended__products__content div {
+    padding: 20px;
+  }
+  .recommended__products__content h3 {
+    font-size: 1.2em;
+  }
+  .recommended__products__content p {
+    font-size: 0.9em;
+  }
+  .recommended__products__content .button {
+    padding: 8px 40px;
+    font-size: 14px;
+  }
 }
 
 

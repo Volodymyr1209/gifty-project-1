@@ -34,6 +34,7 @@
   <link rel="stylesheet" href="css/mproduct.css">
   <link rel="stylesheet" href="css/ingredients.css">
   <link rel="stylesheet" href="css/mdelivery.css">
+  
   <style>
     /* Стилі для хедера */
     .header {
@@ -73,7 +74,7 @@
 
   <header class="header">
     <nav>
-      <a href="index.html">
+      <a href="all.html">
         <img src="../Progect/img/logo.png" alt="Логотип">
       </a>
       <a href="all.html">Головна</a>
@@ -263,7 +264,7 @@
                   <p class="product__price">689<span class="currency">₴ </span></p>
 
                   <h3 class="product__title">
-                    <a href="product-1.html" class="product__detail">Скретч карта світу 3 в 1«edition»</a>                    
+                    <a href="product-1.html" class="product__detail">Дерев'яна скарбничка</a>                    
                   </h3>
 
                   <p class="product__weight">Є в наявності</p>
@@ -460,7 +461,7 @@
               </li>
               <ul class="footer__list">
                 <li class="footer__item">
-                  <a href="#" class="footer__sn" aria-label="группа в вк">
+                  <a href="#" class="footer__sn" aria-label="канал в facebook">
                     <img src="../Progect/img/facebook.png" alt="facebook">
                   </a>
                 </li>
@@ -477,40 +478,66 @@
     </div>
   </footer>
 
-  <div class="modal modal_delivery ">
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="modal modal_delivery "> 
     <div class="modal__main mdelivery">
       <div class="mdelivery__container">
         <h2 class="mdelivery__title">Доставка</h2>
-
-        <form class="mdelivery__form" id="delivery">
-          <fieldset class="mdelivery__fieldset">
-            <input class="mdelivery__input" type="text" name="name" placeholder="Ваше iм'я">
-            <input class="mdelivery__input" type="tel" name="phone" placeholder="Телефон">
-          </fieldset>
-
-          <fieldset class="mdelivery__fieldset mdelivery__fieldset_radio">
+  
+        <div class="mdelivery__block ">
+          <p class="mdelivery__block_title">Ваше iм'я</p>
+          <input class="mdelivery__input" type="text" name="name" placeholder="Ваше iм'я">
+        </div>
+  
+        <div class="mdelivery__block">
+          <p class="mdelivery__block_title">Телефон</p>
+          <input class="mdelivery__input" type="tel" name="phone" placeholder="Телефон">
+        </div>
+  
+        <div class="mdelivery__block">
+          <p class="mdelivery__block_title">Самовивіз або доставка</p>
+          <fieldset class="mdelivery__fieldset_radio">
             <label class="mdelivery__label">
               <input class="mdelivery__radio" type="radio" name="format" value="pickup">
               <span>Самовивіз</span>
             </label>
-
             <label class="mdelivery__label">
               <input class="mdelivery__radio" type="radio" name="format" value="delivery" checked>
               <span>Доставка</span>
             </label>
           </fieldset>
-
-          <fieldset class="mdelivery__fieldset">
-            <input class="mdelivery__input" type="text" name="address" placeholder="Вулиця, дім, квартира">
-            <input class="mdelivery__input mdelivery__input_half" type="number" name="floor" placeholder="Поверх">
-            <input class="mdelivery__input mdelivery__input_half" type="number" name="intercom" placeholder="Домофон">
-          </fieldset>
-        </form>
-
-        <button class="mdelivery__submit" type="submit" form="delivery">Оформить</button>
-
+        </div>
+  
+        <div class="mdelivery__block">
+          <p class="mdelivery__block_title">Місто</p>
+          <input class="mdelivery__input" type="text" name="city" placeholder="Місто">
+        </div>
+  
+        <div class="mdelivery__block">
+          <p class="mdelivery__block_title">Вулиця</p>
+          <input class="mdelivery__input" type="text" name="street" placeholder="Вулиця">
+        </div>
+  
+        <div class="mdelivery__block">
+          <p class="mdelivery__block_title">Номер пошти</p>
+          <input class="mdelivery__input" type="text" name="post_number" placeholder="Номер пошти">
+        </div>
+  
+        <button class="mdelivery__submit" type="submit" form="delivery">Оформити</button>
+  
       </div>
-
+  
       <button class="modal__close" type="button">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <rect x="5.07422" y="5.28247" width="1" height="20" transform="rotate(-45 5.07422 5.28247)" />
@@ -519,6 +546,41 @@
       </button>
     </div>
   </div>
+
+
+
+  
+  <div class="modal modal_login"> /* modal_open щоб відобразилася форма Ввійти в кабінет*/
+    <div class="modal__main mlogin">
+      <div class="mlogin__container">
+        <h2 class="mlogin__title">Ввійти</h2>
+  
+        <form class="mlogin__form" id="login">
+          <input class="mlogin__input" type="email" name="email" placeholder="E-mail">
+          <input class="mlogin__input" type="password" name="password" placeholder="Пароль">
+          <a class="mlogin__forgot" href="#">Забули пароль?</a>
+          <button class="mlogin__button" type="submit">Ввійти</button>
+        </form>
+  
+        <p class="mlogin__register">Ще не маєте акаунту? <a href="#">Зареєструвати новий обліковий запис</a></p>
+      </div>
+  
+      <button class="modal__close" type="button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5.07422" y="5.28247" width="1" height="20" transform="rotate(-45 5.07422 5.28247)" />
+          <rect x="5.78125" y="19.4246" width="1" height="20" transform="rotate(-135 5.78125 19.4246)" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  
 </body>
 
 </html>
+
+
+
+
+
+
+

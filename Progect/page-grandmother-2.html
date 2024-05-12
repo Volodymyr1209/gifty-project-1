@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gifty-Online</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preload" href="fonts/nunito-v25-latin_cyrillic-600.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/nunito-v25-latin_cyrillic-regular.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/nunito-v25-latin_cyrillic-800.woff2" as="font" crossorigin>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/container.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/catalog.css">
+  <link rel="stylesheet" href="css/order.css">
+  <link rel="stylesheet" href="css/goods.css">
+  <link rel="stylesheet" href="css/count.css">
+  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/mproduct.css">
+  <link rel="stylesheet" href="css/ingredients.css">
+  <link rel="stylesheet" href="css/mdelivery.css">
+  <style>
+    /* Стилі для хедера */
+    .header {
+      padding: 10px 0;
+      /* Внутрішні відступи */
+      text-align: center;
+      /* Вирівнювання тексту */
+    }
+
+    /* Стилі для навігаційного меню всередині хедера */
+    .header nav {
+      margin-top: 10px;
+      /* Відступ зверху */
+    }
+
+    .header nav a {
+      color: #fff;
+      /* Колір посилань */
+      text-decoration: none;
+      /* Видаляє декорацію тексту (підкреслення) */
+      padding: 5px 15px;
+      /* Внутрішні відступи */
+      display: inline-block;
+      /* Відображення блоків в лінію */
+    }
+
+    .header nav a:hover {
+      background-color: #ddd;
+      /* Колір фону при наведенні */
+      color: #333;
+      /* Колір тексту при наведенні */
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <nav>
+      <a href="index.html">
+        <img src="../Progect/img/logo.png" alt="Логотип">
+      </a>
+      <a href="all.html">Головна</a>
+      <a href="about.html">Про нас</a>
+      <a href="contact.html">Контакти</a>
+  
+      <form action="#" method="get" class="search-form">
+        <input type="search" name="q" placeholder="Пошук...">
+        <button type="submit">
+          <img src="../Progect/img/dandruff.png" alt="Лупа">
+        </button>
+      </form>
+  
+      <a href="ofice.html">
+        <button type="button">
+          <img src="../Progect/img/office.png" alt="Особистий кабінет">
+        </button>
+      </a>
+    </nav>
+  </header>
+
+  <!-- Решта сайту -->
+
+  <main>
+    <nav class="navigation">
+      <div class="container navigation__container">
+        <ul class="navigation__list">
+
+          <li class="navigation__item">
+            <a href="all.html">
+              <button class="navigation__button navigation__button_all navigation__button_active">Всі категорії</button>
+            </a>            
+          </li>
+
+          <li class="navigation__item">
+          <a href="man.html">
+            <button class="navigation__button navigation__button_man">Коханому</button>
+          </a> 
+          </li>
+
+          <li class="navigation__item">
+            <a href="lady.html">
+              <button class="navigation__button navigation__button_lady">Коханій</button>
+            </a>
+          </li>
+
+
+          <li class="navigation__item">
+            <a href="friend.html">
+             <button class="navigation__button navigation__button_friend">Другу</button>
+            </a> 
+          </li>
+
+
+          <li class="navigation__item">
+            <a href="girlfriend.html">
+             <button class="navigation__button navigation__button_Girlfriend">Подрузі</button>
+            </a>
+          </li>
+
+
+          <li class="navigation__item">
+            <a href="grandfather.html">
+             <button class="navigation__button navigation__button_Grandfather">Дідусю</button>
+            </a>
+          </li>
+
+
+          <li class="navigation__item">
+            <a href="grandmother.html">
+             <button class="navigation__button navigation__button_Grandmother">Бабусі</button>
+            </a>
+          </li>
+
+          <li class="navigation__item">
+            <a href="children.html">
+             <button class="navigation__button navigation__button_Children">Дітям</button>
+            </a>
+          </li>
+
+
+          <li class="navigation__item">
+            <a href="family.html">
+             <button class="navigation__button navigation__button_Family">Сім'я</button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="catalog">
+      <div class="container catalog__container">
+        <div class="catalog__order order">
+          <section class="order__wrapper">
+            <div class="order__header" tabindex="0" role="button">
+              <h2 class="order__title">Кошик</h2>
+
+              <span class="order__count">4</span>
+            </div>
+
+            <div class="order__wrap_list">
+              <ul class="order__list">
+                <li class="order__item">
+                  <img class="order__image" src="img/product-1.png" alt="Тримач для книг «Руки»">
+
+                  <div class="order__goods goods">
+                    <h3 class="goods__title">Скретч карта світу 3 в 1«edition»</h3>
+
+                    <p class="goods__price">689
+                      <span class="currency">₴</span>
+                    </p>
+                  </div>
+
+                  <div class="count">
+                    <button class="count__minus">-</button>
+                    <p class="count__amount">2</p>
+                    <button class="count__plus">+</button>
+                  </div>
+                </li>
+
+                <li class="order__item">
+                  <img class="order__image" src="img/product-3.png" alt="Тримач для книг «Руки»">
+
+                  <div class="order__goods goods">
+                    <h3 class="goods__title">Тримач для книг «Руки»</h3>
+
+                    <p class="goods__price">245
+                      <span class="currency">₴</span>
+                    </p>
+                  </div>
+
+                  <div class="count">
+                    <button class="count__minus">-</button>
+                    <p class="count__amount">2</p>
+                    <button class="count__plus">+</button>
+                  </div>
+                </li>
+
+                <li class="order__item">
+                  <img class="order__image" src="img/product-4.png" alt="Подушка «Чоловік з бородою»">
+
+                  <div class="order__goods goods">
+                    <h3 class="goods__title">Подушка «Чоловік з бородою»</h3>
+
+                    <p class="goods__price">239
+                      <span class="currency">₴</span>
+                    </p>
+                  </div>
+
+                  <div class="count">
+                    <button class="count__minus">-</button>
+                    <p class="count__amount">1</p>
+                    <button class="count__plus">+</button>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="order__total">
+                <p>Всього</p>
+                <p>
+                  <span class="order__amount">1279</span>
+                  <span class="currency">₴</span>
+                </p>
+              </div>
+
+              <button class="order__submit">Оформити замовлення</button>
+
+              <div class="order__apeal">
+                <p class="order__text">Безкоштовна доставка</p>
+                <img src="../Progect/img/" alt="">
+                <button class="order__close">Свернуть</button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="catalog__wrapper">
+            <h2 class="catalog__title">Для бабусі</h2>
+            <div class="catalog__wrap_list">
+              <ul class="catalog__list">
+                
+                <li class="catalog__item">
+                  <article class="product">
+                    <img src="img/product-14.png" alt="набір «Starbucks»" class="product__image">
+  
+                    <p class="product__price">689<span class="currency">₴ </span></p>
+  
+                    <h3 class="product__title">
+                      <a href="product-14.html" class="product__detail">набір «Starbucks»</a>                    
+                    </h3>
+  
+                    <p class="product__weight">Є в наявності</p>
+  
+                    <button class="product__add" type="button">Додати</button>
+                  </article>
+                </li>
+  
+                <li class="catalog__item">
+                  <article class="product">
+                    <img src="img/product-15.png" alt="набір «Для  компанії»" class="product__image">
+  
+                    <p class="product__price">550<span class="currency">₴ </span></p>
+  
+                    <h3 class="product__title">
+                      <a href="product-15.html">набір «Для  компанії»</a>
+                    </h3>
+  
+                    <p class="product__weight">Є в наявності</p>
+  
+                    <button class="product__add" type="button">Додати</button>
+                  </article>
+                </li>
+  
+                <li class="catalog__item">
+                  <article class="product">
+                    <img src="img/product-16.png" alt="набір «феєрія»" class="product__image">
+  
+                    <p class="product__price">639<span class="currency">₴</span></p>
+  
+                    <h3 class="product__title">
+                      <a href="product-16.html" class="product__detail">набір «феєрія»</a>
+                    </h3>
+  
+                    <p class="product__weight">Є в наявності</p>
+  
+                    <button class="product__add" type="button">Додати</button>
+                  </article>
+                </li>
+
+                <li class="catalog__item">
+                    <article class="product">
+                      <img src="img/product-17.png" alt="Кружка «червону калину підіймемо» " class="product__image">
+    
+                      <p class="product__price">560<span class="currency">₴</span></p>
+    
+                      <h3 class="product__title">
+                        <a href="product-17.html">Кружка «червону калину підіймемо»</a>
+                      </h3>
+    
+                      <p class="product__weight">Є в наявності</p>
+    
+                      <button class="product__add" type="button">Додати</button>
+                    </article>
+                  </li>
+  
+                <li class="catalog__item">
+                  <article class="product">
+                    <img src="img/product-11.png" alt=" набір«Black Jack»" class="product__image">
+  
+                    <p class="product__price">480<span class="currency">₴</span></p>
+  
+                    <h3 class="product__title">
+                      <a href="product-11.html" class="product__detail"> набір«Black Jack»</a>                    
+                    </h3>
+  
+                    <p class="product__weight">Є в наявності</p>
+  
+                    <button class="product__add" type="button">Додати</button>
+                  </article>
+                </li>
+  
+                <li class="catalog__item">
+                  <article class="product">
+                    <img src="img/product-12.png" alt="набір«Кашемір D’lux»" class="product__image">
+  
+                    <p class="product__price">450<span class="currency">₴</span></p>
+  
+                    <h3 class="product__title">
+                      <a href="product-12.html" class="product__detail">набір«Кашемір D’lux»</a>
+                    </h3>
+  
+                    <p class="product__weight">Є в наявності</p>
+  
+                    <button class="product__add" type="button">Додати</button>
+                  </article>
+                </li>
+  
+                <li class="catalog__item">
+                  <article class="product">
+                    <img src="img/product-19.png" alt="Фартук «Моя кухня»" class="product__image">
+  
+                    <p class="product__price">200<span class="currency">₴</span></p>
+  
+                    <h3 class="product__title">
+                      <a href="product-19.html"class="product__detail">Фартук «Моя кухня»</a>
+                    </h3>
+  
+                    <p class="product__weight">Є в наявності</p>
+  
+                    <button class="product__add" type="button">Додати</button>
+                  </article>
+                </li>
+  
+                <li class="catalog__item">
+                  <article class="product">
+                    <img src="img/product-5.png" alt="Фартух «Best dad ever» Кращій тато" class="product__image">
+  
+                    <p class="product__price">369<span class="currency">₴</span></p>
+  
+                    <h3 class="product__title">
+                      <a href="product-5.html"class="product__detail">Фартух «Best dad ever» Кращий тато</a>
+                    </h3>
+  
+                    <p class="product__weight">Є в наявності</p>
+  
+                    <button class="product__add" type="button">Додати</button>
+                  </article>
+                </li>
+  
+                <li class="catalog__item">
+                  <article class="product">
+                    <img src="img/product-6.png" alt="Фартух «Kiss the cook»" class="product__image">
+  
+                    <p class="product__price">«320<span class="currency">₴ </span></p>
+  
+                    <h3 class="product__title">
+                      <a href="product-6.html"class="product__detail">Фартух «Kiss the cook»</a>
+                    </h3>
+  
+                    <p class="product__weight">Є в наявності</p>
+  
+                    <button class="product__add" type="button">Додати</button>
+                  </article>
+                </li>
+  
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+    <div class="number-container">
+      <a href="page-grandmother-1.html" class="number-next-link">
+        <span class="number-next">1</span>
+      </a>
+      <a href="page-grandmother-2.html" class="number-next-link">
+        <span class="number-next">2</span>
+      </a>
+      <a href="page-grandmother-3.html" class="number-next-link">
+        <span class="number-next">3</span>
+      </a>
+
+    </div>
+    
+    
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <img class="footer__logo" src="img/logo.png" alt="Логотип gift">
+
+        <address class="footer__address">
+          <div class="footer__contact">
+            <h2 class="footer__title">Номер для замовленняа</h2>
+
+            <a class="footer__phone" href="tel:+79308333811">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.01 15.38C18.78 15.38 17.59 15.18 16.48 14.82C16.13 14.7 15.74 14.79 15.47 15.06L13.9 17.03C11.07 15.68 8.42 13.13 7.01 10.2L8.96 8.54C9.23 8.26 9.31 7.87 9.2 7.52C8.83 6.41 8.64 5.22 8.64 3.99C8.64 3.45 8.19 3 7.65 3H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21C20.72 21 21 20.37 21 19.82V16.37C21 15.83 20.55 15.38 20.01 15.38Z" />
+              </svg>
+
+              <span>+380(930)833-111-11</span>
+            </a>
+          </div>
+
+          <div class="footer__contact">
+            <h2 class="footer__title footer__title_sn">Ми в соцмережах</h2>
+
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__sn" aria-label="Instagram">
+                  <img src="../Progect/img/instagram.png" alt="Instagram">
+                </a>
+              </li>
+
+              <li class="footer__item">
+                <a href="#" class="footer__sn" aria-label="канал в telegram">
+                  <img src="../Progect/img/telegram.png" alt="telegram">
+                </a>
+              </li>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="#" class="footer__sn" aria-label="канал в facebook">
+                    <img src="../Progect/img/facebook.png" alt="facebook">
+                  </a>
+                </li>
+              </ul>
+          </div>
+        </address>
+
+        <div class="footer__development">
+          <p>© gifty, 2024</p>
+          <p>Design: <a href="volodymyr.v.yaniuk@ukd.edu.ua">Yaniuk volodymyr</a></p>
+          <p>Developer: <a href="volodymyr.v.yaniuk@ukd.edu.ua">Yaniuk volodymyr</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal modal_delivery ">
+    <div class="modal__main mdelivery">
+      <div class="mdelivery__container">
+        <h2 class="mdelivery__title">Доставка</h2>
+
+        <form class="mdelivery__form" id="delivery">
+          <fieldset class="mdelivery__fieldset">
+            <input class="mdelivery__input" type="text" name="name" placeholder="Ваше iм'я">
+            <input class="mdelivery__input" type="tel" name="phone" placeholder="Телефон">
+          </fieldset>
+
+          <fieldset class="mdelivery__fieldset mdelivery__fieldset_radio">
+            <label class="mdelivery__label">
+              <input class="mdelivery__radio" type="radio" name="format" value="pickup">
+              <span>Самовивіз</span>
+            </label>
+
+            <label class="mdelivery__label">
+              <input class="mdelivery__radio" type="radio" name="format" value="delivery" checked>
+              <span>Доставка</span>
+            </label>
+          </fieldset>
+
+          <fieldset class="mdelivery__fieldset">
+            <input class="mdelivery__input" type="text" name="address" placeholder="Вулиця, дім, квартира">
+            <input class="mdelivery__input mdelivery__input_half" type="number" name="floor" placeholder="Поверх">
+            <input class="mdelivery__input mdelivery__input_half" type="number" name="intercom" placeholder="Домофон">
+          </fieldset>
+        </form>
+
+        <button class="mdelivery__submit" type="submit" form="delivery">Оформить</button>
+
+      </div>
+
+      <button class="modal__close" type="button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5.07422" y="5.28247" width="1" height="20" transform="rotate(-45 5.07422 5.28247)" />
+          <rect x="5.78125" y="19.4246" width="1" height="20" transform="rotate(-135 5.78125 19.4246)" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</body>
+
+</html>

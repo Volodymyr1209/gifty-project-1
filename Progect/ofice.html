@@ -1,55 +1,330 @@
-<html><head>
-    <title>Увійти</title>
-    <style>
-      body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-      }
-      form {
-        border: 1px solid #ccc;
-        padding: 20px;
-        width: 300px;
-      }
-      label {
-        display: block;
-        margin-top: 10px;
-      }
-      input[type="text"], input[type="email"], textarea {
-        width: 100%;
-        padding: 5px;
-        margin-top: 5px;
-      }
-      input[type="submit"] {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-        margin-top: 10px;
-      }
-      h1 {
-        margin-top: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <h2>Форма зворотнього зв'язку</h2>
-    <form action="/submit_feedback" method="post">
-      <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name"><br>
-      <label for="surname">Surname:</label><br>
-      <input type="text" id="surname" name="surname"><br>
-      <label for="email">Email:</label><br>
-      <input type="email" id="email" name="email"><br>
-      <label for="message">Message:</label><br>
-      <textarea id="message" name="message"></textarea><br>
-      <input type="submit" value="Submit">
-    </form>
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gifty-Online</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preload" href="fonts/nunito-v25-latin_cyrillic-600.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/nunito-v25-latin_cyrillic-regular.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/nunito-v25-latin_cyrillic-800.woff2" as="font" crossorigin>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/container.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/catalog.css">
+  <link rel="stylesheet" href="css/order.css">
+  <link rel="stylesheet" href="css/goods.css">
+  <link rel="stylesheet" href="css/count.css">
+  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/mproduct.css">
+  <link rel="stylesheet" href="css/ingredients.css">
+  <link rel="stylesheet" href="css/mdelivery.css">
+  <style>
+    /* Стилі для хедера */
+    .header {
+      padding: 10px 0;
+      /* Внутрішні відступи */
+      text-align: center;
+      /* Вирівнювання тексту */
+    }
+
+    /* Стилі для навігаційного меню всередині хедера */
+    .header nav {
+      margin-top: 10px;
+      /* Відступ зверху */
+    }
+
+    .header nav a {
+      color: #fff;
+      /* Колір посилань */
+      text-decoration: none;
+      /* Видаляє декорацію тексту (підкреслення) */
+      padding: 5px 15px;
+      /* Внутрішні відступи */
+      display: inline-block;
+      /* Відображення блоків в лінію */
+    }
+
+    .header nav a:hover {
+      background-color: #ddd;
+      /* Колір фону при наведенні */
+      color: #333;
+      /* Колір тексту при наведенні */
+    }
+
+    /* Стилі для форми зворотнього зв'язку */
+    .feedback-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 360px;
+      margin: 0 auto; /* центруємо форму */
+    }
+
+    .feedback-form label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .feedback-form input[type="text"],
+    .feedback-form input[type="email"],
+    .feedback-form textarea {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+    }
+
+    .feedback-form input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .feedback-form h2 {
+      margin-top: 0;
+    }
+
+    /* Стилі для особистого кабінету */
+    .personal-cabinet {
+  max-width: 1400px;
+  margin: 40px auto 0; /* Додаємо відстань від особистого кабінету до футера */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  display: flex; /* Встановлюємо блоковий режим */
+  flex-direction: row; /* Встановлюємо горизонтальну орієнтацію */
+  justify-content: space-between; /* Рівномірно розподіляємо простір між елементами */
+}
+
+.footer {
+  background-color:#FFFFFF;
+  color: #000000;
+  padding: 20px 0;
+  margin-top: 40px; /* Відстань від особистого кабінету */
+}
+
+
+
+    .personal-cabinet h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .left-column {
+      width: calc(50% - 10px); /* Ширина колонки, залишаємо 10px місця між колонками */
+    }
+
+    .right-column {
+      width: calc(50% - 10px); /* Ширина колонки, залишаємо 10px місця між колонками */
+    }
+
+    .profile-form,
+    .change-password-form {
+      margin-bottom: 30px;
+    }
+
+    .profile-form h2,
+    .change-password-form h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .profile-form label,
+    .change-password-form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .profile-form input[type="email"],
+    .profile-form input[type="text"],
+    .profile-form input[type="tel"],
+    .change-password-form input[type="password"] {
+      width: calc(100% - 10px);
+      /* Враховується внутрішній padding та відступи */
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    /* Ось зміни */
+    .profile-form button,
+    .change-password-form button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: calc(100% - 10px);
+      /* Враховується внутрішній padding та відступи */
+      margin-top: 10px;
+    }
+
+    .change-password-form {
+      margin-top: 20px; /* Додано відступ від форми профілю */
+    }
+
+    .change-password-form button {
+      margin-top: 10px; /* Додано відступ між кнопками */
+    }
+
+    .order-history {
+      margin-top: 20px;
+    }
+
+    .order-history h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .order-history p {
+      font-size: 16px;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <nav>
+      <a href="index.html">
+        <img src="img/logo.png" alt="Логотип">
+      </a>
+      <a href="all.html">Головна</a>
+      <a href="about.html">Про нас</a>
+      <a href="contact.html">Контакти</a>
+
+      <form action="#" method="get" class="search-form">
+        <input type="search" name="q" placeholder="Пошук...">
+        <button type="submit">
+          <img src="img/dandruff.png" alt="Лупа">
+        </button>
+      </form>
+
+      <a href="ofice.html">
+        <button type="button">
+          <img src="img/office.png" alt="Особистий кабінет">
+        </button>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="personal-cabinet">
+      <div class="right-column">
+        <form class="profile-form">
+          <h2>Редагувати профіль</h2>
+          <label for="email">Електронна пошта:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="name">Ім'я:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="phone">Телефон:</label>
+          <input type="tel" id="phone" name="phone" required>
+          <label for="city">Місто:</label>
+          <input type="text" id="city" name="city">
+          <label for="street">Вулиця:</label>
+          <input type="text" id="street" name="street">
+          <label for="house">Будинок:</label>
+          <input type="text" id="house" name="house">
+          <label for="apartment">Квартира:</label>
+          <input type="text" id="apartment" name="apartment">
+          <label for="index">Індекс:</label>
+          <input type="text" id="index" name="index">
+          <button type="submit">Зберегти</button>
+        </form>
+      </div>
   
-</body></html>
+      <div class="left-column">
+        <form class="change-password-form">
+          <h2>Зміна пароля</h2>
+          <label for="currentPassword">Поточний пароль:</label>
+          <input type="password" id="currentPassword" name="currentPassword" required>
+          <label for="newPassword">Новий пароль:</label>
+          <input type="password" id="newPassword" name="newPassword" required>
+          <label for="confirmNewPassword">Ще раз пароль:</label>
+          <input type="password" id="confirmNewPassword" name="confirmNewPassword" required>
+          <button type="submit">Змінити пароль</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <img class="footer__logo" src="img/logo.png" alt="Логотип gift">
+
+        <address class="footer__address">
+          <div class="footer__contact">
+            <h2 class="footer__title">Номер для замовленняа</h2>
+
+            <a class="footer__phone" href="tel:+79308333811">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.01 15.38C18.78 15.38 17.59 15.18 16.48 14.82C16.13 14.7 15.74 14.79 15.47 15.06L13.9 17.03C11.07 15.68 8.42 13.13 7.01 10.2L8.96 8.54C9.23 8.26 9.31 7.87 9.2 7.52C8.83 6.41 8.64 5.22 8.64 3.99C8.64 3.45 8.19 3 7.65 3H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21C20.72 21 21 20.37 21 19.82V16.37C21 15.83 20.55 15.38 20.01 15.38Z" />
+              </svg>
+
+              <span>+380(930)833-111-11</span>
+            </a>
+          </div>
+
+          <div class="footer__contact">
+            <h2 class="footer__title footer__title_sn">Ми в соцмережах</h2>
+
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__sn" aria-label="Instagram">
+                  <img src="../Progect/img/instagram.png" alt="Instagram">
+                </a>
+              </li>
+
+              <li class="footer__item">
+                <a href="#" class="footer__sn" aria-label="канал в telegram">
+                  <img src="../Progect/img/telegram.png" alt="telegram">
+                </a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__sn" aria-label="канал в facebook">
+                  <img src="../Progect/img/facebook.png" alt="facebook">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </address>
+
+        <div class="footer__development">
+          <p>© gifty, 2024</p>
+          <p>Design: <a href="volodymyr.v.yaniuk@ukd.edu.ua">Yaniuk volodymyr</a></p>
+          <p>Developer: <a href="volodymyr.v.yaniuk@ukd.edu.ua">Yaniuk volodymyr</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

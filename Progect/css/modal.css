@@ -1,7 +1,7 @@
 .modal {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8); /* змінено колір на білий */
   cursor: pointer;
   overflow-y: auto;
   display: none;
@@ -15,6 +15,10 @@
   position: relative;
   cursor: default;
   margin: auto;
+  background-color: #fff; /* додано білий фон для головного блоку модального вікна */
+  padding: 20px; /* додано відступи всередині блоку */
+  border-radius: 5px; /* додано заокруглення кутів */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* додано тінь */
 }
 
 .modal__close {
@@ -32,26 +36,140 @@
   color: #FF7020;
 }
 
+.modal__close:focus-visible {
+  color: #FF7020;
+  outline-color: #FF7020;
+}
+
+.mdelivery__block {
+  margin-bottom: 20px;
+}
+
+.mdelivery__block_title {
+  font-weight: bold;
+}
+
+.mdelivery__fieldset_radio {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.mdelivery__label {
+  display: flex;
+  align-items: center;
+}
+
+.mdelivery__label span {
+  margin-left: 5px;
+}
+
+@media (min-width: 480px) {
+  .modal {
+    padding: 20px; /* збільшено відступи на більших екранах */
+  }
+}
+
+@media (min-width: 1024px) {
+  .modal {
+    padding: 30px; /* збільшено відступи на більших екранах */
+  }
+
+  .modal__close {
+    top: 24px;
+    right: 24px;
+  }
+}
+
+
+
+
+
+
+
+
+/* стиль для кнопок ввійти  */
+.modal_login {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  overflow-y: auto;
+  display: none;
+}
+
+.modal_open {
+  display: flex;
+}
+
+.modal__main {
+  position: relative;
+  cursor: default;
+  margin: auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal__close {
+  color: #B1B1B1;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  outline: 1px solid transparent;
+  outline-offset: 3px;
+  border-radius: 3px;
+  transition: color .3s ease-in-out;
+}
+
+.modal__close:hover {
+  color: #FF7020;
+}
 
 .modal__close:focus-visible {
   color: #FF7020;
   outline-color: #FF7020;
 }
 
-@media (min-width: 480px) {
-  .modal {
-    padding: 10px;
-  }
-  
+.mlogin__container {
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-@media (min-width: 1024px) {
-  .modal {
-    padding: 20px;
-  }
-  
-  .modal__close {
-    top: 24px;
-    right: 24px;
-  }
+.mlogin__title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.mlogin__input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.mlogin__button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.mlogin__forgot {
+  margin-top: 5px;
+}
+
+.mlogin__register {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.mlogin__register a {
+  color: #007bff;
 }
